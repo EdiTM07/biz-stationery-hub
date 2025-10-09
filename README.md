@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Papelería Pro - Sistema de Gestión Integral
 
-## Project info
+Sistema completo de gestión para papelerías con dashboard profesional, autenticación de usuarios, control de roles y módulos para inventario, ventas, clientes, facturación, servicios de impresión y recargas celulares.
 
-**URL**: https://lovable.dev/projects/8781172e-3449-4b72-93ac-74dfd33bd046
+## 🚀 Características Principales
 
-## How can I edit this code?
+- **Dashboard Administrativo**: Vista general con KPIs y métricas en tiempo real
+- **Gestión de Inventario**: CRUD completo de productos con alertas de stock bajo
+- **Punto de Venta (POS)**: Sistema de ventas rápido y eficiente
+- **Gestión de Clientes**: Registro y seguimiento de clientes
+- **Facturación**: Generación automática de facturas
+- **Servicios de Impresión**: Control de trabajos de impresión
+- **Recargas Celulares**: Registro de transacciones de recargas
+- **Sistema de Roles**: Administrador, Cajero y Empleado
+- **Autenticación Segura**: Login/registro con Lovable Cloud
+- **Diseño Responsivo**: Funciona en escritorio, tablet y móvil
 
-There are several ways of editing your application.
+## 🛠️ Tecnologías
 
-**Use Lovable**
+- **Frontend**: React 18 + Vite + TypeScript
+- **Estilos**: TailwindCSS + Shadcn/ui
+- **Backend**: Lovable Cloud (Supabase)
+- **Base de Datos**: PostgreSQL
+- **Autenticación**: Lovable Cloud Authentication
+- **Despliegue**: Lovable Hosting
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8781172e-3449-4b72-93ac-74dfd33bd046) and start prompting.
+## 📦 Instalación Local
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clonar el repositorio
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Instalar dependencias
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Iniciar servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🎯 Uso
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Registro de Usuario**: Crear una cuenta en `/auth`
+2. **Inicio de Sesión**: Acceder con credenciales
+3. **Dashboard**: Ver métricas y estadísticas principales
+4. **Gestión de Módulos**: Navegar por inventario, ventas, clientes, etc.
 
-**Use GitHub Codespaces**
+## 👥 Roles de Usuario
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Administrador**: Acceso completo al sistema
+- **Cajero**: Gestión de ventas e inventario
+- **Empleado**: Acceso limitado según permisos
 
-## What technologies are used for this project?
+## 🔒 Seguridad
 
-This project is built with:
+- Autenticación con correo y contraseña
+- Row Level Security (RLS) en todas las tablas
+- Validación de entrada con Zod
+- Protección de rutas sensibles
+- Roles almacenados en tabla separada
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📊 Base de Datos
 
-## How can I deploy this project?
+El sistema utiliza Lovable Cloud con las siguientes tablas:
 
-Simply open [Lovable](https://lovable.dev/projects/8781172e-3449-4b72-93ac-74dfd33bd046) and click on Share -> Publish.
+- `user_roles`: Roles de usuarios
+- `profiles`: Perfiles de usuario
+- `categorias`: Categorías de productos
+- `productos`: Inventario de productos
+- `clientes`: Registro de clientes
+- `ventas`: Transacciones de venta
+- `detalle_ventas`: Detalles de cada venta
+- `servicios_impresion`: Servicios de impresión
+- `recargas`: Recargas celulares
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Personalización
 
-Yes, you can!
+El sistema utiliza un sistema de diseño basado en tokens CSS definidos en `src/index.css`. Para personalizar colores y estilos, edita las variables CSS en ese archivo.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 Despliegue
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Para desplegar tu aplicación:
+
+1. Haz clic en el botón "Publish" en Lovable
+2. Tu app estará disponible en tu URL personalizada
+
+## 🤝 Soporte
+
+Para soporte y preguntas, visita la documentación de Lovable en https://docs.lovable.dev
