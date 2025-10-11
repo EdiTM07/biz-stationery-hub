@@ -165,6 +165,7 @@ export type Database = {
       }
       profiles: {
         Row: {
+          activo: boolean
           avatar_url: string | null
           created_at: string | null
           email: string
@@ -174,6 +175,7 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
+          activo?: boolean
           avatar_url?: string | null
           created_at?: string | null
           email: string
@@ -183,6 +185,7 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
+          activo?: boolean
           avatar_url?: string | null
           created_at?: string | null
           email?: string
@@ -340,7 +343,19 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      users_with_roles: {
+        Row: {
+          activo: boolean | null
+          avatar_url: string | null
+          created_at: string | null
+          email: string | null
+          id: string | null
+          nombre_completo: string | null
+          role: Database["public"]["Enums"]["app_role"] | null
+          telefono: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       has_role: {
