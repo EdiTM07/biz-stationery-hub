@@ -15,6 +15,8 @@ import Facturacion from "./pages/Facturacion";
 import Servicios from "./pages/Servicios";
 import Recargas from "./pages/Recargas";
 import Reportes from "./pages/Reportes";
+import AdminPanel from "./pages/AdminPanel";
+import Perfil from "./pages/Perfil";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +47,8 @@ const App = () => (
               <Route path="servicios" element={<Servicios />} />
               <Route path="recargas" element={<Recargas />} />
               <Route path="reportes" element={<Reportes />} />
+              <Route path="admin" element={<AdminPanel />} />
+              <Route path="perfil" element={<Perfil />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

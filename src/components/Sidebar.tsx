@@ -66,11 +66,20 @@ export const Sidebar = () => {
             <span className="ml-2 text-lg font-bold">Papelería Pro</span>
           </div>
 
-          {/* User Info */}
-          <div className="border-b border-border px-6 py-4">
+          {/* User Info - Clickeable */}
+          <NavLink
+            to={userRole === 'administrador' ? '/admin' : '/perfil'}
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              cn(
+                "block border-b border-border px-6 py-4 transition-colors hover:bg-secondary",
+                isActive && "bg-secondary"
+              )
+            }
+          >
             <p className="text-sm font-medium">{user?.email}</p>
             <p className="text-xs text-muted-foreground capitalize">{userRole || 'Empleado'}</p>
-          </div>
+          </NavLink>
 
           {/* Navigation */}
           <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
